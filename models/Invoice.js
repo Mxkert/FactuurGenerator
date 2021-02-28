@@ -13,7 +13,7 @@ let Invoice = new Schema({
     datum: {
         type: Date
     },
-    bedrag: {
+    totaalbedrag: {
         type: Number
     },
     percentage_fee: {
@@ -27,6 +27,15 @@ let Invoice = new Schema({
     },
     btw: {
         type: Number
+    },
+    euro_prijs: {
+        type: Number
+    },
+    currency: {
+        type: String
+    },
+    werkzaamheden: {
+        type: Array
     }
 });
 module.exports = mongoose.model('Invoice', Invoice);
