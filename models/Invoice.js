@@ -7,6 +7,9 @@ let Invoice = new Schema({
     type_klant: {
         type: String
     },
+    adres_klant: {
+        type: String
+    },
     btw_nummer: {
         type: String
     },
@@ -18,6 +21,12 @@ let Invoice = new Schema({
     },
     percentage_fee: {
         type: Number
+    },
+    valuta: {
+        type: String
+    },
+    service_fee: {
+        type: Boolean
     },
     fee: {
         type: Number
@@ -36,6 +45,9 @@ let Invoice = new Schema({
     },
     werkzaamheden: {
         type: Array
+    },
+    invoiceID: {
+        type: Number
     }
 });
 module.exports = mongoose.model('Invoice', Invoice);

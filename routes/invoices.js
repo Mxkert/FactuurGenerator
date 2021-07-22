@@ -29,6 +29,22 @@ router.route("/:id").get((req, res, next) => {
   });
 });
 
+router.route("/date/:currentDate").get((req, res, next) => {
+  console.log(req.params)
+  res.json(req.params)
+  // Invoice.find(
+  //   {},
+  //   null,
+  //   {},
+  //   (err, invoice) => {
+  //     if (err) {
+  //       return next(err);
+  //     }
+  //     res.status(200).send(invoice);
+  //   }
+  // );
+});
+
 router.post('/add', (req, res) => {
   let invoice = new Invoice(req.body);
   invoice.save()
